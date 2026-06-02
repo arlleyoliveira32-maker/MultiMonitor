@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle | Setup Minimalista</title>
+
+    <!-- CDN de Ícones do Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Vinculação dos Estilos e Mídias de Fora e de Dentro -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="terminais-media.css">
+</head>
+
+<body>
+
+    <!-- 🎛️ QUADRANTE DO TOPO (Painel de Formulário / Stream Deck) -->
+    <nav id="stream-deck">
+        
+        <!-- Bloco da Logo Organizado Atributo por Linha -->
+        <div 
+            class="deck-header" 
+            style="display: flex; align-items: center; gap: 12px;"
+        >
+            <img 
+                src="imagem/logopaineldecontrole.png" 
+                alt="Logo"
+                style="
+                    width: 45px; 
+                    height: 45px; 
+                    object-fit: contain; 
+                    flex-shrink: 0; 
+                    filter: drop-shadow(0px 0px 8px rgba(108, 92, 231, 0.6));
+                "
+            >
+            
+            <span 
+                style="
+                    font-size: 1.1em; 
+                    font-weight: 700; 
+                    letter-spacing: 2px; 
+                    color: #ffffff;
+                "
+            >
+                PAINEL DE CONTROLE
+            </span>
+        </div>
+
+        <div class="botoes-container">
+            <a href="https://arlleyoliveira32-maker.github.io/p-gina-de-login/" target="_blank" class="btn-deck ativo">
+                <i class="material-icons">launch</i>
+                <span>Página de Login 1</span>
+            </a>
+
+            <!-- Botão de Login 2 sem o ícone de imagem -->
+            <a 
+                href="link-da-sua-futura-pagina-login-2.html" 
+                target="_blank" 
+                class="btn-deck"
+                style="display: flex; align-items: center;"
+            >
+                <span style="font-weight: 500; color: #e0e0e0;">
+                    Página de Login 2
+                </span>
+            </a>
+
+            <a href="link-da-sua-futura-pagina-login-3.html" target="_blank" class="btn-deck">
+                <i class="material-icons">launch</i>
+                <span>Página de Login 3</span>
+            </a>
+
+            <!-- Botão de Música configurado para carregar direto na Estação de Mídia -->
+            <a 
+                href="https://www.youtube.com/embed/PyS3vCyJH9g?autoplay=1&mute=0&loop=1&playlist=PyS3vCyJH9g" 
+                target="telaMusica" 
+                class="btn-deck btn-musica"
+            >
+                <i class="material-icons">music_note</i>
+                <span>Música Lofi</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 📺 WORKSPACE (Mesa de Monitores) -->
+    <main class="workspace-setup">
+
+        <!-- 🔲 QUADRANTES DOS TERMINAIS DE LOGIN (Lado Esquerdo) -->
+        <div class="painel-logins">
+
+            <!-- Monitor 1 -->
+            <div id="monitor-1" class="moldura-monitor monitor-horizontal">
+                <div class="monitor-tag">Terminal de Login 01</div>
+                
+                <!-- 🌐 CONTAINER DE BOTÕES DE AÇÃO (MONITOR 1) -->
+                <div style="position: absolute; top: 10px; right: 12px; z-index: 10; display: flex; gap: 6px;">
+                    <!-- Botão 1: Link da Página (Abre em nova aba) -->
+                    <a href="https://arlleyoliveira32-maker.github.io/p-gina-de-login/" target="_blank" title="Ver Página Cheia" style="color: #ffffff; background: rgba(0, 102, 204, 0.85); padding: 4px 8px; border-radius: 4px; font-size: 0.75em; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                        <i class="material-icons" style="font-size: 14px;">open_in_new</i>
+                        Acessar
+                    </a>
+                    <!-- Botão 2: Modificar no VS Code -->
+                    <a href="vscode://file/C:/SeuCaminho/terminal-login1.html" title="Modificar no VS Code" style="color: #ffffff; background: rgba(0, 0, 0, 0.6); padding: 4px 8px; border-radius: 4px; font-size: 0.75em; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                        <i class="material-icons" style="font-size: 14px;">code</i>
+                        Editar
+                    </a>
+                </div>
+
+                <iframe name="telaLogin1" src="terminal-login1.html" class="tela-frame" allowtransparency="true"></iframe>
+            </div>
+
+            <!-- Monitor 2 -->
+            <div id="monitor-2" class="moldura-monitor monitor-horizontal">
+                <div class="monitor-tag">Terminal de Login 02</div>
+                
+                <!-- 🌐 CONTAINER DE BOTÕES DE AÇÃO (MONITOR 2) -->
+                <div style="position: absolute; top: 10px; right: 12px; z-index: 10; display: flex; gap: 6px;">
+                    <!-- Botão 1: Link da Página -->
+                    <a href="link-da-sua-futura-pagina-login-2.html" target="_blank" title="Ver Página Cheia" style="color: #ffffff; background: rgba(0, 102, 204, 0.85); padding: 4px 8px; border-radius: 4px; font-size: 0.75em; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                        <i class="material-icons" style="font-size: 14px;">open_in_new</i>
+                        Acessar
+                    </a>
+                    <!-- Botão 2: Modificar no VS Code -->
+                    <a href="vscode://file/C:/SeuCaminho/terminal-login2.html" title="Modificar no VS Code" style="color: #ffffff; background: rgba(0, 0, 0, 0.6); padding: 4px 8px; border-radius: 4px; font-size: 0.75em; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                        <i class="material-icons" style="font-size: 14px;">code</i>
+                        Editar
+                    </a>
+                </div>
+
+                <iframe name="telaLogin2" src="terminal-login2.html" class="tela-frame" allowtransparency="true"></iframe>
+            </div>
+
+            <!-- Monitor 3 -->
+            <div id="monitor-3" class="moldura-monitor monitor-horizontal">
+                <div class="monitor-tag">Terminal de Login 03</div>
+                
+                <!-- 🌐 CONTAINER DE BOTÕES DE AÇÃO (MONITOR 3) -->
+                <div style="position: absolute; top: 10px; right: 12px; z-index: 10; display: flex; gap: 6px;">
+                    <!-- Botão 1: Link da Página -->
+                    <a href="link-da-sua-futura-pagina-login-3.html" target="_blank" title="Ver Página Cheia" style="color: #ffffff; background: rgba(0, 102, 204, 0.85); padding: 4px 8px; border-radius: 4px; font-size: 0.75em; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                        <i class="material-icons" style="font-size: 14px;">open_in_new</i>
+                        Acessar
+                    </a>
+                    <!-- Botão 2: Modificar no VS Code -->
+                    <a href="vscode://file/C:/SeuCaminho/terminal-login3.html" title="Modificar no VS Code" style="color: #ffffff; background: rgba(0, 0, 0, 0.6); padding: 4px 8px; border-radius: 4px; font-size: 0.75em; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                        <i class="material-icons" style="font-size: 14px;">code</i>
+                        Editar
+                    </a>
+                </div>
+
+                <iframe name="telaLogin3" src="terminal-login3.html" class="tela-frame" allowtransparency="true"></iframe>
+            </div>
+
+        </div>
+
+        <!-- 📻 QUADRANTE DA ESTAÇÃO DE MÚSICA (Lado Direito) -->
+        <div id="estacao-midia" class="moldura-monitor monitor-vertical">
+            <div class="monitor-tag">Estação de Mídia</div>
+            <iframe name="telaMusica" src="https://www.youtube.com/embed/PyS3vCyJH9g?autoplay=1&mute=0&loop=1&playlist=PyS3vCyJH9g" class="tela-frame" allowtransparency="true"></iframe>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   🖥️ CONFIGURAÇÃO DE LAYOUT PARA TELAS GRANDES (Computador/Desktop)
+   ========================================================================== */
+@media screen and (min-width: 992px) {
+
+    /* Alinha o menu superior horizontalmente com espaçamento premium */
+    #stream-deck {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 32px;
+    }
+
+    .botoes-container {
+        overflow-x: visible;
+        width: auto;
+        justify-content: flex-start;
+        padding-bottom: 0;
+    }
+
+    .btn-musica {
+        margin-left: 24px;
+    }
+
+    /* 🎮 ORGANIZAÇÃO DA MESA EM COLUNAS (LADO A LADO) */
+    .workspace-setup {
+        flex-direction: row;
+        align-items: stretch; 
+        gap: 24px;
+        padding: 24px;
+        overflow-y: hidden;
+    }
+
+    /* 🔲 COLUNA DA ESQUERDA: Painel Triplo de Logins */
+    .painel-logins {
+        flex: 3; /* Ocupa 3 partes da largura disponível */
+        flex-direction: column;
+        gap: 16px;
+        height: 100%;
+    }
+
+    .monitor-horizontal {
+        flex: 1; /* Divide o espaço vertical igualmente entre os 3 monitores */
+        height: auto;
+    }
+
+    /* 📻 COLUNA DA DIREITA: Estação de Mídia Vertical */
+    .monitor-vertical {
+        flex: 1; /* Ocupa 1 parte da largura (mais estreito) */
+        height: 100%;
+    }
+}

@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   RESET E ESTILO GERAL (ESTÉTICA CLARA E MODERNA)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-image: url('imagem/background.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #f4f5f7;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #1d1d1f;
+}
+
+/* ==========================================================================
+   🎛️ QUADRANTE DO TOPO (Painel de Formulário / Stream Deck)
+   ========================================================================== */
+#stream-deck {
+    /* Cor de fundo e borda do painel do topo */
+    background: rgba(30, 30, 35, 0.85);
+    border-bottom: 2px solid #0066cc;
+    
+    padding: 20px 30px;
+    backdrop-filter: blur(10px);
+}
+
+.deck-header {
+    color: #ffffff;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.botoes-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.btn-deck {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 18px;
+    color: #e0e0e0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.82em;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-deck i {
+    font-size: 1.25em;
+    color: #a0a0a5;
+}
+
+.btn-deck:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.btn-deck.ativo {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.btn-deck.ativo i {
+    color: #0066cc;
+}
+
+/* ==========================================================================
+   📺 MESA DE MONITORES (Workspace - Estrutura de Layout)
+   ========================================================================== */
+.workspace-setup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.painel-logins {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+}
+
+/* Base comum de vidro para os monitores */
+.moldura-monitor {
+    position: relative;
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   🎨 CUSTOMIZAÇÃO DOS QUADRANTES (Cor de Fundo e Borda aqui!)
+   ========================================================================== */
+
+/* --- TERMINAIS DE LOGIN --- */
+
+/* Monitor 1 */
+#monitor-1 {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Monitor 2 */
+#monitor-2 {
+    background: rgba(230, 240, 250, 0.65);
+    border: 1px solid #4a90e2;
+}
+
+/* Monitor 3 */
+#monitor-3 {
+    background: rgba(245, 238, 230, 0.65);
+    border: 1px solid #e67e22;
+}
+
+/* --- ESTAÇÃO DE MÚSICA --- */
+#estacao-midia {
+    background: rgba(235, 230, 250, 0.65);
+    border: 1px solid #6c5ce7;
+}
+
+
+/* ==========================================================================
+   ELEMENTOS INTERNOS DOS MONITORES (Tags e Frames)
+   ========================================================================== */
+.monitor-tag {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 0.68em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    z-index: 6;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+/* Cores das tags combinando com os quadrantes */
+#monitor-1 .monitor-tag { background: #86868b; }
+#monitor-2 .monitor-tag { background: #4a90e2; }
+#monitor-3 .monitor-tag { background: #e67e22; }
+#estacao-midia .monitor-tag { background: #6c5ce7; }
+
+.tela-frame {
+    display: block;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.monitor-horizontal {
+    height: 160px;
+}
+
+.monitor-vertical {
+    width: 30%;
+    height: 100%;
+}

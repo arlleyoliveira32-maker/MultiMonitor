@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   CONFIGURAÇÃO DE ESTILO E RESPONSIVIDADE INTERNA DOS MONITORES
+   ========================================================================== */
+
+/* Regra padrão para o corpo de dentro dos iframes */
+body { 
+    margin: 0; 
+    color: #1d1d1f; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+/* O botão principal do terminal (Clique para Inicializar / Ativar Som) */
+a { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-decoration: none; 
+    color: #2c2c2e; 
+    padding: 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25); /* Placa de vidro sutil para dar contraste */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+/* Ícones dos Terminais (Estilo sólido e tecnológico, sem neon) */
+i { 
+    font-size: 38px; 
+    color: #424245; 
+    margin-bottom: 6px; 
+    transition: color 0.25s ease;
+}
+
+/* Texto principal (TERMINAL DE LOGIN / ESTAÇÃO DE MÍDIA) */
+p { 
+    margin: 0; 
+    font-weight: 600; 
+    letter-spacing: 1px; 
+    font-size: 12px; 
+    text-transform: uppercase;
+}
+
+/* Subtexto inferior de ação entre colchetes */
+span { 
+    font-size: 9px; 
+    color: #86868b; 
+    margin-top: 6px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+}
+
+/* Transição suave ao passar o mouse */
+a:hover { 
+    transform: translateY(-2px); 
+    background: rgba(255, 255, 255, 0.5);
+    color: #0066cc; /* Destaca em azul premium no hover */
+}
+
+a:hover i {
+    color: #0066cc;
+}
+
+/* ==========================================================================
+   🖥️ COMPORTAMENTO EM TELAS GRANDES (Computador / Desktop)
+   ========================================================================== */
+@media screen and (min-width: 992px) {
+    
+    a {
+        padding: 22px;
+    }
+
+    /* Os ícones ganham mais presença no monitor do PC */
+    i { 
+        font-size: 48px; 
+        margin-bottom: 10px;
+    }
+
+    p { 
+        font-size: 13.5px; 
+        letter-spacing: 1.5px;
+    }
+
+    span { 
+        font-size: 10px; 
+        margin-top: 8px; 
+    }
+}
