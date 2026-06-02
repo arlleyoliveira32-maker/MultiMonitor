@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   RESET E ESTILO GERAL (ESTÉTICA CLARA E MODERNA)
+   
    ========================================================================== */
 * {
     margin: 0;
@@ -69,6 +69,7 @@ body {
     font-weight: 500;
     white-space: nowrap;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none; /* Remove a borda padrão de seleção do navegador */
 }
 
 .btn-deck i {
@@ -82,14 +83,15 @@ body {
     color: #ffffff;
 }
 
-.btn-deck.ativo {
+/* Ativa o fundo branco e letras azuis dinamicamente para qualquer um dos 4 botões ao clicar */
+.btn-deck:focus {
     background: #ffffff;
     border-color: rgba(0, 0, 0, 0.12);
     color: #0066cc;
     font-weight: 600;
 }
 
-.btn-deck.ativo i {
+.btn-deck:focus i {
     color: #0066cc;
 }
 
