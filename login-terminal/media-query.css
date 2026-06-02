@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   ARQUITETURA DE BREAKPOINTS (CONVENÇÃO DE ESCALA DO PROFESSOR)
+   ========================================================================== */
+
+/* 📱 1. DISPOSITIVOS INTERMEDIÁRIOS (TABLETS: 768px até 992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    body {
+        /* Transiciona do fundo escuro para um gradiente diagonal tech */
+        background-image: linear-gradient(135deg, #0d0e12, #1f2430);
+    }
+    
+    section#login {
+        width: 75vw; /* A caixinha de 280px se expande para ocupar 75% da tela */
+        height: 340px; /* Reduzimos a altura pois o layout agora é horizontal */
+        box-shadow: 0px 0px 40px rgba(6, 182, 212, 0.2); /* Troca o glow para verde */
+    }
+
+    /* Engenharia de Float: Coluna da Imagem na Esquerda */
+    section#login > div#imagem {
+        float: left;
+        width: 35%;
+        height: 100%; /* Ocupa toda a altura de 340px da caixa mãe */
+        border-bottom: none;
+        border-right: 2px solid #06b6d4; /* A linha divisória passa a ser vertical */
+    }
+
+    /* Engenharia de Float: Coluna do Formulário na Direita */
+    section#login > div#formulario {
+        float: right;
+        width: 65%;
+        padding: 30px; /* Mais espaço interno para preenchimento */
+    }
+}
+
+/* 💻 2. TELAS GRANDES (DESKTOP: Acima de 992px) */
+@media screen and (min-width: 992px) {
+
+    body {
+        /* Gradiente imersivo que mistura o Roxo Neon com o Preto Carbono */
+        background-image: linear-gradient(to top, #0d0e12, #1c1430);
+    }
+
+    section#login {
+        width: 850px; /* Tamanho fixo perfeito para monitores desktop */
+        height: 400px;
+        border: 1px solid rgba(6, 182, 212, 0.3); /* Reforça a borda verde */
+        box-shadow: 0px 0px 50px rgba(6, 182, 212, 0.3);
+    }
+
+    /* Efeito Espelho: Inversão de Lado Usando Float Controlado */
+    section#login > div#imagem {
+        float: right; /* A imagem vai para o lado direito no computador */
+        width: 50%; /* Divisão exata de 50% do espaço da caixa */
+        height: 100%;
+        border-bottom: none;
+        border-left: 2px solid #06b6d4; /* Linha divisória vertical na esquerda */
+    }
+
+    section#login > div#formulario {
+        float: right; /* O formulário flutua para a direita, mas estabiliza na esquerda pelo espaço */
+        width: 50%;
+        padding: 40px;
+    }
+
+    /* Ampliação Tipográfica e Ajuste de Respiro Visual */
+    div#formulario > h1 {
+        font-size: 1.8em;
+        margin-bottom: 12px;
+    }
+
+    div#formulario > p {
+        font-size: 0.9em;
+        margin-bottom: 25px; /* Empurra os inputs para baixo, gerando elegância */
+    }
+}

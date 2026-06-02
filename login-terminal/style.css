@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   PALETA DE CORES CYBERPUNK FUTURISTA
+   Preto Carbono: #0d0e12
+   Roxo Neon:    #8b5cf6
+   Verde Cyber:  #06b6d4
+   Branco Puro:  #ffffff
+   ========================================================================== */
+
+/* 1. RESET GLOBAL E CONFIGURAÇÃO DA FONTE DO SISTEMA */
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; /* Garante que padding e border fiquem dentro da caixa */
+}
+
+/* 2. CONFIGURAÇÃO E AMBIENTAÇÃO DO VIEWPORT */
+body, html {
+    background-color: #0d0e12; /* Fundo carbono escuro industrial */
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Elimina qualquer barra de rolagem global */
+}
+
+main {    
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* ==========================================================================
+   3. O TERMINAL DE LOGIN CENTRALIZADO
+   ========================================================================== */
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centralização matemática perfeita */
+
+    background-color: #151821; /* Fundo interno cinza-escuro militar */
+    width: 280px; /* Um pouco mais largo que o do professor para melhor leitura */
+    height: 560px;
+    border-radius: 12px; /* Cantos arredondados suavizados */
+    border: 1px solid rgba(139, 92, 246, 0.2); /* Borda roxa sutil neon */
+    box-shadow: 0px 0px 25px rgba(139, 92, 246, 0.25); /* Glow roxo de fundo */
+    overflow: hidden; /* Esconde objetos que vazem da borda */
+
+    /* Animações fluidas exigidas para a transição de telas */
+    transition: width .4s, height .4s, box-shadow .4s;
+    transition-timing-function: ease-in-out;
+}
+
+/* 4. BLOCO DA IMAGEM VERTICAL (MODO CELULAR) */
+section#login > div#imagem {
+    display: block; 
+    /* Carrega a arte futurista. Caso a imagem falhe, o fundo roxo sólido assume */
+    background: #8b5cf6 url('imagem/imagem.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 160px; /* Altura controlada para dar mais espaço ao formulário */
+    border-bottom: 2px solid #06b6d4; /* Divisória horizontal em ciber-verde */
+}
+
+/* 5. BLOCO DO FORMULÁRIO */
+section#login > div#formulario {
+    display: block;
+    padding: 20px 15px;
+}
+
+div#formulario > h1 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-shadow: 0px 0px 8px rgba(6, 182, 212, 0.5); /* Brilho no título */
+}
+
+div#formulario > p {
+    color: #9ca3af; /* Cinza médio para leitura confortável */
+    font-size: 0.8em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   6. CAMPOS DE ENTRADA (MECÂNICA REESTRUTURADA)
+   ========================================================================== */
+.campo {
+    background-color: #1f2430; /* Fundo da caixinha do input */
+    border: 1px solid rgba(139, 92, 246, 0.4); /* Moldura roxa */
+    display: block;
+    width: 100%;
+    height: 45px; /* Ligeiramente mais alto para melhor usabilidade */
+    border-radius: 6px;
+    margin: 10px 0px;
+    position: relative;
+}
+
+/* Esconde as labels da tela de forma estrita conforme o professor fez */
+.campo > label {
+    display: none;
+}
+
+/* Estilização dos Ícones do Google */
+.campo > i {
+    color: #06b6d4; /* Ícone nasce ciber-verde */
+    font-size: 1.6em;
+    width: 40px;
+    padding: 8px 0px 0px 10px; /* Alinhamento por margem interna */
+}
+
+/* Ajuste e Engenharia dos Inputs */
+.campo > input {
+    background-color: transparent; /* Remove a necessidade de transform translateY */
+    color: #ffffff;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    width: calc(100% - 45px); /* Desconto exato do espaço do ícone lateral */
+    height: 100%;
+    border: none;
+    outline: none; /* Remove a borda azul padrão do navegador ao clicar */
+    padding: 0px 10px;
+    
+    /* Alinhamento nativo na vertical usando propriedades de linha */
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Efeito de Foco Avançado (Reforçando o aprendizado) */
+.campo:focus-within {
+    border-color: #06b6d4; /* Borda do campo vira verde ao digitar */
+    box-shadow: 0px 0px 10px rgba(6, 182, 212, 0.3);
+}
+
+/* Placeholder customizado em caixa alta tech */
+.campo > input::placeholder {
+    color: #6b7280;
+    font-size: 0.9em;
+}
+
+/* ==========================================================================
+   7. BOTÕES DE ACIONAMENTO INTERATIVO
+   ========================================================================== */
+.submit {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 45px;
+    background-color: #06b6d4; /* Botão principal ciber-verde */
+    color: #0d0e12; /* Texto escuro para alto contraste */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color .2s, box-shadow .2s;
+}
+
+.submit:hover {
+    background-color: #8b5cf6; /* Transiciona para Roxo Neon no hover */
+    color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(139, 92, 246, 0.6);
+}
+
+.botao {
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    height: 40px;
+    padding-top: 12px; /* Centralização do texto interna */
+    margin-top: 10px;
+    background-color: transparent;
+    color: #8b5cf6; /* Link nasce Roxo Neon */
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 6px;
+    transition: all .2s;
+}
+
+.botao:hover {
+    background-color: rgba(6, 182, 212, 0.1); /* Fundo verde translúcido */
+    color: #06b6d4;
+    border-color: #06b6d4;
+}
+
+/* Alinhamento do pequeno ícone dentro do link */
+a.botao > i {
+    font-size: 1.1em;
+    vertical-align: middle;
+    margin-left: 5px;
+}

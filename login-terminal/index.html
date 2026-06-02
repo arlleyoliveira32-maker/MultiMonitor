@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGlow Refinery - Terminal de Acesso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <section id="login">
+            
+            <div id="imagem">
+               </div>
+            
+            <div id="formulario">
+                <h1>Acesso ao Terminal</h1>
+                <p>Conecte-se à sua carteira de dados criptografados para gerenciar e refinar seus ativos digitais de rede.</p>
+                
+                <form action="autenticar.php" method="post">
+                    
+                    <div class="campo">
+                        <i class="material-icons">terminal</i> <input type="email" name="email" id="iemail" placeholder="CÓDIGO DE OPERADOR (EMAIL)" autocomplete="email" required maxlength="40">
+                        <label for="iemail">Operador</label>
+                    </div>
+
+                    <div class="campo">
+                        <i class="material-icons">token</i> <input type="password" name="senha" id="isenha" placeholder="CHAVE DE ENCRIPTAÇÃO" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="isenha">Chave</label>
+                    </div>
+                    
+                    <input type="submit" value="INICIAR SESSÃO" class="submit">
+                    
+                    <a href="recuperar.html" class="botao">
+                        Sincronizar Chave Perdida
+                        <i class="material-icons">sync</i> </a>
+                    
+                </form>
+            </div>
+            
+        </section>
+    </main>
+    
+</body>
+</html>
